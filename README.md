@@ -108,8 +108,12 @@ bin/rails db:migrate
 
 16. Restart your server - Ctrl + C then ```bin/dev```
 
+17. Go to ```http://localhost:3000/users/sign_up``` in your browser, where you will find a sign-up form to create an account by entering an email and password.
 
-
+18. You can copy Devise views (for customization) to your app by running:
+```
+bin/rails g devise:views
+```
 
 
 
