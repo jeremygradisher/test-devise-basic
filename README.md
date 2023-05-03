@@ -26,4 +26,19 @@ bin/dev
 
 6. If you cloned this, Precompile javascript/css: ```rails assets:precompile```
 
-7. 
+## Create a landing page:
+
+7. Create a new controller named "home" by running the following command in your terminal:
+```
+rails generate controller Home index
+```
+
+8. Open the config/routes.rb file and add the following line:
+```
+root 'home#index'
+or
+get '/home', to: 'home#index'
+```
+## Installing and Configuring Devise
+
+9. 
