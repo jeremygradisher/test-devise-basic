@@ -88,6 +88,25 @@ end
 ```
 bin/rails g devise user
 ```
+That gets you this:
+```
+invoke  active_record
+create    db/migrate/20230503153643_devise_create_users.rb
+create    app/models/user.rb
+invoke    test_unit
+create      test/models/user_test.rb
+create      test/fixtures/users.yml
+insert    app/models/user.rb
+route  devise_for :users
+```
+** Open up the migration file make sure it has what you need: db/migrate - Open the app/models/user.rb model file to review the default code - it added a route too **
+
+15. Run the migration we just created:
+```
+bin/rails db:migrate
+```
+
+16. Restart your server - Ctrl + C then ```bin/dev```
 
 
 
