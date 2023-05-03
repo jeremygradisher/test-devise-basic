@@ -135,8 +135,12 @@ Welcome! You have signed up successfully.
 
 21. restyling the flash messages:
 ```
-    <p class="notice"><%= notice %></p> 
-    <p class="alert"><%= alert %></p>
+<% flash.each do |type, msg| %>
+  <div class="alert alert-<%= type %> alert-primary alert-dismissible fade show" role="alert">
+    <%= msg %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
 ```
 
 This is a fully functional, basic set-up.
