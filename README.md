@@ -114,7 +114,32 @@ bin/rails db:migrate
 ```
 bin/rails g devise:views
 ```
+** I am adding basic ```<div class="container"></div>``` around the views I am interacting with **
 
+19. Sign up and test
+```
+Welcome! You have signed up successfully.
+```
+
+## Linking Authentication to the Landing Page
+
+20. Open the app/views/home/index.html.erb file for editing and add the highlighted lines:
+```
+<% if user_signed_in? %> 
+ <div> Welcome <%= current_user.email %> </div> 
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+<% else %>
+  <%= button_to "Sign in", new_user_session_path %> 
+<% end %>
+```
+
+21. restyling the flash messages:
+```
+    <p class="notice"><%= notice %></p> 
+    <p class="alert"><%= alert %></p>
+```
+
+This is a fully functional, basic set-up.
 
 
 
