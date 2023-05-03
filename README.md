@@ -80,10 +80,14 @@ end
   <%= yield %>
 </body>
 ```
+* You can copy Devise views (for customization) to your app by running: ```rails g devise:views```
 
 ## Creating the User Model with Devise
 
-14. 
+14. To create your Devise user, run the following generator command:
+```
+bin/rails g devise user
+```
 
 
 
